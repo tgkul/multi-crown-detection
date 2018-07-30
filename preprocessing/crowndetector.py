@@ -1,10 +1,11 @@
-from cv2 import COLOR_RGB2GRAY, COLOR_GRAY2RGB, COLOR_GRAY2BGR
+from cv2 import COLOR_RGB2GRAY, COLOR_GRAY2RGB, COLOR_GRAY2BGR, IMREAD_GRAYSCALE
 from cv2 import erode as cv2erode
-from cv2 import fillPoly, boundingRect, bitwise_and, imwrite, cvtColor
+from cv2 import fillPoly, boundingRect, bitwise_and, imread, imwrite, cvtColor
 from PIL.Image import fromarray
 from PIL.Image import open as imgopen
 from skimage.measure import find_contours
 from numpy import array, uint8, ones, zeros
+from os import walk
 from os.path import join
 
 
@@ -22,7 +23,7 @@ def gray2bgr(img):
 
 def initial_crop(img):
     height, width = img.shape
-    new_width = width * 0.8
+    new_width = width * 0.7
     new_height = height
 
     left = (width - new_width) / 2
@@ -86,3 +87,39 @@ def get_crowns(img_relative_path):
     image_array = recursive_mask_and_crop(img, image_array)
 
     return image_array
+
+
+def crop_to_crown(root_file_path):
+    for subdir, dirs, files in walk(root_file_path):
+        if subdir != root_file_path:
+            for file in files:
+                if 'jpg' in file:
+
+                    img_relative_path = join(subdir, file)
+
+                    image = imread(img_relative_path, IMREAD_GRAYSCALE)
+
+                    image = initial_crop(image)
+
+                    contours = find_contours(image, 80)
+
+                    contour = max(contours, key=len).astype(int)
+
+                    cv2_contour = []
+
+                    for point in contour:
+                        cv2_contour.append([point[1], point[0]])
+
+                    contour = array(cv2_contour)
+
+                    stencil = zeros(image.shape).astype(image.dtype)
+                    color = [255, 255, 255]
+                    fillPoly(stencil, [contour], color)
+                    image = bitwise_and(image, stencil)
+
+                    x, y, w, h = boundingRect(contour)
+                    #                 print(x,y,w,h)
+                    cropped_image = crop(image, x, y, w, h)
+                    final_image = gray2bgr(cropped_image)
+
+                    imwrite(img_relative_path.split('.')[0] + '.jpg', final_image)
