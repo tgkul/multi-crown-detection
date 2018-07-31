@@ -30,7 +30,7 @@ class Model():
         self.resnet = load_model(join(base_dir, 'model-resnet50.h5'))
         self.log.info('model initialization completed')
 
-    def matcher(database_path, img, model):
+    def matcher(self, database_path, img, model):
         predicted_array = get_features(img, model)
 
         f = h5File(database_path, 'r')
@@ -53,7 +53,7 @@ class Model():
 
         return afile, min_mse, mse_list
 
-    def super_matcher(database_dir, test_image_path, model):
+    def super_matcher(self, database_dir, test_image_path, model):
         get_crowns(test_image_path)
 
         images = global_variables.image_array
@@ -64,7 +64,7 @@ class Model():
 
         for img in images:
             img = correct_histogram_of_single_image(img)
-            file, mse, mse_list = matcher(database_dir, img, model)
+            file, mse, mse_list = self.matcher(database_dir, img, model)
             crown_dict[file] = img
             crown_error_dict[file] = mse
             crown_mse_list_dict[file] = mse_list
