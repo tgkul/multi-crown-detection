@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cfd26b1-e6b9-41b4-9ecc-795c993b3a69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7cfd26b1-e6b9-41b4-9ecc-795c993b3a69" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,56 +78,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="357">
+              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <marker date="1533076009094" expanded="true" signature="615:616" ph="..." />
                 <marker date="1533076009094" expanded="true" signature="2684:2685" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db_creator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1533072690506" expanded="true" signature="632:637" ph="..." />
-                <marker date="1533072690506" expanded="true" signature="632:742" ph="..." />
-                <marker date="1533072690506" expanded="true" signature="761:1695" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/database_creator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <marker date="1532967756824" expanded="true" signature="166:167" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/histogram_equilization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding>
-                <marker date="1533073625638" expanded="true" signature="201:202" ph="..." />
-                <marker date="1533073625638" expanded="true" signature="734:735" ph="..." />
               </folding>
             </state>
           </provider>
@@ -519,18 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1533076009094" expanded="true" signature="615:616" ph="..." />
-            <marker date="1533076009094" expanded="true" signature="2684:2685" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing/database_creator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -551,6 +496,18 @@
             <marker date="1533072690506" expanded="true" signature="632:637" ph="..." />
             <marker date="1533072690506" expanded="true" signature="632:742" ph="..." />
             <marker date="1533072690506" expanded="true" signature="761:1695" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1533076009094" expanded="true" signature="615:616" ph="..." />
+            <marker date="1533076009094" expanded="true" signature="2684:2685" ph="..." />
           </folding>
         </state>
       </provider>
