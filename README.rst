@@ -3,7 +3,7 @@ Multi Crown Detection
 =====================
 
 Introduction
-------------
+============
 
 This project contains 2 main files. db_creator.py and detector.py
 
