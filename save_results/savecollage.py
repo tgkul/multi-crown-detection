@@ -2,15 +2,10 @@ from PIL.ImageDraw import Draw
 from PIL.Image import new as new_image
 from math import ceil
 from os.path import join
-from shutil import rmtree
-from os import mkdir
 from base64 import b64encode
 
 
 def save_collage(crown_dict, mse_dict):
-
-    rmtree('saved_files')
-    mkdir('saved_files')
 
     number_of_crowns = len(crown_dict)
     rows = ceil(number_of_crowns / 4)
@@ -37,9 +32,6 @@ def save_collage(crown_dict, mse_dict):
 
 
 def get_collage(crown_dict, mse_dict):
-
-    rmtree('saved_files')
-    mkdir('saved_files')
 
     number_of_crowns = len(crown_dict)
     rows = ceil(number_of_crowns / 4)

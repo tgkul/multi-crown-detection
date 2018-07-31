@@ -1,5 +1,6 @@
 from cv2 import COLOR_RGB2GRAY, COLOR_GRAY2RGB, COLOR_GRAY2BGR, IMREAD_GRAYSCALE
 from cv2 import erode as cv2erode
+import cv2
 from cv2 import fillPoly, boundingRect, bitwise_and, imread, imwrite, cvtColor
 from PIL.Image import fromarray
 from PIL.Image import open as imgopen
@@ -7,6 +8,7 @@ from skimage.measure import find_contours
 from numpy import array, uint8, ones, zeros
 from os import walk
 from os.path import join
+from globals import global_variables
 
 
 def rgb2gray(img):
@@ -47,10 +49,10 @@ def crop(img, locx, locy, w, h):
 def erode(img):
     print('eroding...')
     kernel = ones((2, 2), uint8)
-    return cv2erode(img, kernel, iterations=1)
+    return cv2.erode(img, kernel, iterations=1)
 
 
-def recursive_mask_and_crop(img, image_array):
+def recursive_mask_and_crop(img):
     print('\nRecursive Call')
     for contour in find_contours(img, 55):
         if len(contour) > 900:
@@ -70,23 +72,18 @@ def recursive_mask_and_crop(img, image_array):
 
             if len(contour) < 1900:
                 # imwrite(join('saved_files', 'test'+'_'+str(len(contour))+'_crop.jpg'), gray2bgr(cropped_image))
-                image_array.append(fromarray(gray2rgb(cropped_image)))
+                global_variables.image_array.append(fromarray(gray2rgb(cropped_image)))
             else:
                 eroded_image = erode(cropped_image)
-                image_array = recursive_mask_and_crop(eroded_image, image_array)
-    return image_array
+                recursive_mask_and_crop(eroded_image)
 
 
 def get_crowns(img_relative_path):
-    image_array = []
     img = imgopen(img_relative_path)
     img = img.point(lambda x: x * 0.95)
-
     img = rgb2gray(array(img))
 
-    image_array = recursive_mask_and_crop(img, image_array)
-
-    return image_array
+    recursive_mask_and_crop(img)
 
 
 def crop_to_crown(root_file_path):

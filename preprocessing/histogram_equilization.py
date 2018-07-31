@@ -1,4 +1,4 @@
-from cv2 import imread, imwrite, IMREAD_GRAYSCALE, createCLAHE, cvtColor, COLOR_BGR2RGB
+from cv2 import imread, imwrite, IMREAD_GRAYSCALE, createCLAHE
 from PIL import Image
 from os import walk, remove
 from os.path import join
@@ -6,7 +6,7 @@ from numpy import array
 
 
 def correct_histogram(root_dir_path):
-    clahe = createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    clahe = createCLAHE(clipLimit=6.0, tileGridSize=(8, 8))
 
     for subdir, dirs, files in walk(root_dir_path):
         if subdir != root_dir_path:
@@ -20,9 +20,7 @@ def correct_histogram(root_dir_path):
 
 
 def correct_histogram_of_single_image(image):
-    clahe = createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    cv2_image = array(image)
-    cv2_image = cv2_image[:, :, ::-1].copy()
+    clahe = createCLAHE(clipLimit=10.0, tileGridSize=(8, 8))
+    cv2_image = array(image.convert('L'))
     cv2_image = clahe.apply(cv2_image)
-    cv2_image = cvtColor(cv2_image, COLOR_BGR2RGB)
-    return Image.fromarray(cv2_image)
+    return Image.fromarray(cv2_image).convert('RGB')

@@ -1,0 +1,15 @@
+scikit-learn
+shutil
+os
+base64
+math
+re
+numpy
+h5py
+matplotlib
+tensorflow-gpu
+keras
+opencv-python
+PIL
+scikit-image
+imutils
