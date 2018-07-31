@@ -25,3 +25,22 @@ db_creator.py will then
 5. Apply data augmentation to the crown images to cover all rotations possible.
 6. Equalize histogram of images to get correct contrast.
 7. Extract features from these crowns and create a database of dictionary with **Key = id** and **value = feature array**
+
+
+detector.py
+^^^^^^^^^^^^^
+
+This file will be used for testing and crown detection.
+The images should be kept in **test_images/** directory. Name of the file does not matter.
+The detector is capable of detecting multiple crowns from a single image. Keep all crowns together and pass the photo to the function. (*Recommendation: crowns should not touch each other. Although the image processing is capable of detecting light contacts between crowns, this might reduce the detection accuracy*)
+
+detector.py will then
+
+1. Detect crowns in the image
+2. Extract crowns and make the background black removing all background noise.
+3. Equalize histogram of images to get correct contrast.
+4. Get crown features from the images using Keras model for each crown.
+5. Get database from the memory and search the closest feature array by calculating MSE.
+6. Return the image as well as the crown ID with lowest MSE in dictionaries.
+7. Get collage of all crowns and their ID in the database by stacking the crowns' images in order.
+8. Plot the MSE graphs and save them along with the collage.
