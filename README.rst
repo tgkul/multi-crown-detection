@@ -28,7 +28,7 @@ db_creator.py will then
 
 
 detector.py
-^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 This file will be used for testing and crown detection.
 The images should be kept in **test_images/** directory. Name of the file does not matter.
@@ -44,3 +44,12 @@ detector.py will then
 6. Return the image as well as the crown ID with lowest MSE in dictionaries.
 7. Get collage of all crowns and their ID in the database by stacking the crowns' images in order.
 8. Plot the MSE graphs and save them along with the collage.
+
+
+Note
+^^^^
+
+1. test_detector.py is a working detector while remaining completely independent of other local packages. But this makes the code hard to maintain and makes it less readable.
+2. Requirements.txt file provides all the dependencies for this project.
+3. **Model/** contains the Keras Model for feature extraction
+4. 
