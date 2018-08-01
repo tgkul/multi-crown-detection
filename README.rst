@@ -2,6 +2,8 @@
 Multi Crown Detection
 =====================
 
+|
+
 Introduction
 ------------
 
@@ -13,6 +15,8 @@ The detection happens by comparing features of dental crowns. These features are
 Since the data is all numerical, this database is formatted as HDF5 file for fast retrieval and efficient, secure storage.
 
 This project contains 2 main files. db_creator.py and detector.py
+
+|
 
 Description
 -----------

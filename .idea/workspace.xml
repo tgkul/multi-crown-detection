@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cfd26b1-e6b9-41b4-9ecc-795c993b3a69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/histogram_equilization.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/histogram_equilization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_results/saveplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/save_results/saveplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/15_in_3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/3_in_0.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/4_in_25.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/8_out_7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/9_in_26.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/collage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/saved_files/collage.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_files/collage1.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,19 +57,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="3216" />
-          <entry key="rst" value="949" />
+          <entry key="rst" value="957" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Python" value="3216" />
-          <entry key="ReST" value="949" />
+          <entry key="ReST" value="957" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="py" value="89" />
-          <entry key="rst" value="1" />
+          <entry key="rst" value="2" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -93,7 +77,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="89" />
-          <entry key="ReST" value="1" />
+          <entry key="ReST" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -103,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state relative-caret-position="407">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <marker date="1533142280617" expanded="true" signature="607:608" ph="..." />
@@ -379,10 +363,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Run" order="3" weight="0.29530916" />
+      <window_info anchor="right" id="Run" order="3" weight="0.4216418" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12260128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12260128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -398,7 +382,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Run" order="3" visible="true" weight="0.29530916" />
+      <window_info anchor="right" id="Run" order="3" visible="true" weight="0.4216418" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -528,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="407">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1533142280617" expanded="true" signature="607:608" ph="..." />
