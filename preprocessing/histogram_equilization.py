@@ -20,7 +20,7 @@ def correct_histogram(root_dir_path):
 
 
 def correct_histogram_of_single_image(image):
-    clahe = createCLAHE(clipLimit=10.0, tileGridSize=(8, 8))
+    clahe = createCLAHE(clipLimit=9.0, tileGridSize=(8, 8))
     cv2_image = array(image.convert('L'))
     cv2_image = clahe.apply(cv2_image)
     return Image.fromarray(cv2_image).convert('RGB')

@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cfd26b1-e6b9-41b4-9ecc-795c993b3a69" name="Default Changelist" comment="" />
+    <list default="true" id="7cfd26b1-e6b9-41b4-9ecc-795c993b3a69" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/histogram_equilization.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/histogram_equilization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save_results/saveplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/save_results/saveplot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/15_in_3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/3_in_0.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/4_in_25.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/8_out_7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/9_in_26.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/collage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/saved_files/collage.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_files/collage1.jpg" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,50 +64,58 @@
     <session id="-2021691779">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2549" />
+          <entry key="py" value="3216" />
+          <entry key="rst" value="949" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2549" />
+          <entry key="Python" value="3216" />
+          <entry key="ReST" value="949" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="85" />
+          <entry key="py" value="89" />
+          <entry key="rst" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="85" />
+          <entry key="Python" value="89" />
+          <entry key="ReST" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+            <state relative-caret-position="391">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1533076009094" expanded="true" signature="615:616" ph="..." />
-                <marker date="1533076009094" expanded="true" signature="2684:2685" ph="..." />
+                <marker date="1533142280617" expanded="true" signature="607:608" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -119,7 +145,6 @@
         <option value="$PROJECT_DIR$/results/saveplot.py" />
         <option value="$PROJECT_DIR$/results/savecollage.py" />
         <option value="$PROJECT_DIR$/mlmodel/featureextractor.py" />
-        <option value="$PROJECT_DIR$/save_results/saveplot.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/preprocessing/file_tree_preperation.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -134,6 +159,9 @@
         <option value="$PROJECT_DIR$/db_creator.py" />
         <option value="$PROJECT_DIR$/preprocessing/histogram_equilization.py" />
         <option value="$PROJECT_DIR$/detector.py" />
+        <option value="$PROJECT_DIR$/Model.py" />
+        <option value="$PROJECT_DIR$/save_results/saveplot.py" />
+        <option value="$PROJECT_DIR$/README.rst" />
       </list>
     </option>
   </component>
@@ -335,7 +363,7 @@
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12260128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -351,8 +379,27 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Run" order="3" visible="true" weight="0.39392325" />
+      <window_info anchor="right" id="Run" order="3" weight="0.29530916" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12260128" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Run" order="3" visible="true" weight="0.29530916" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -372,10 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1532965387006" expanded="true" signature="293:298" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -386,9 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -396,13 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/save_results/saveplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -417,9 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding>
-            <marker date="1533061431272" expanded="true" signature="11:16" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -427,9 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -437,10 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1533058812576" expanded="true" signature="133:134" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -448,9 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -458,21 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1532974722825" expanded="true" signature="178:179" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/histogram_equilization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <marker date="1533073625638" expanded="true" signature="201:202" ph="..." />
-            <marker date="1533073625638" expanded="true" signature="734:735" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -480,10 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1532967756824" expanded="true" signature="166:167" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -491,26 +492,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/histogram_equilization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <marker date="1533141709518" expanded="true" signature="201:202" ph="..." />
+            <marker date="1533141709518" expanded="true" signature="734:735" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1533072690506" expanded="true" signature="632:637" ph="..." />
-            <marker date="1533072690506" expanded="true" signature="632:742" ph="..." />
-            <marker date="1533072690506" expanded="true" signature="761:1695" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save_results/saveplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        <state relative-caret-position="391">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1533076009094" expanded="true" signature="615:616" ph="..." />
-            <marker date="1533076009094" expanded="true" signature="2684:2685" ph="..." />
+            <marker date="1533142280617" expanded="true" signature="607:608" ph="..." />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>
 </project>
