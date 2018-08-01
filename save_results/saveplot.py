@@ -5,10 +5,10 @@ from os.path import join
 def save_plots(mse_list_dict):
     crowns = mse_list_dict.keys()
 
-    quotient, remainder = len(crowns)//3, len(crowns) % 3
+    quotient, remainder = len(crowns)//4, len(crowns) % 3
 
     rows = quotient
-    columns = 3
+    columns = 4
 
     if remainder != 0:
         rows = quotient + 1
