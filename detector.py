@@ -44,7 +44,7 @@ class Detector:
         for file in files:
             crown_id = file.split('_')[0]
             database_image_array = nparray(f.get(file))
-            mse = get_mse(predicted_array.reshape(100352), database_image_array.reshape(100352))
+            mse = get_mse(database_image_array.reshape(100352), predicted_array.reshape(100352))
 
             if crown_id in mse_dict:
                 if mse < mse_dict[crown_id]:
