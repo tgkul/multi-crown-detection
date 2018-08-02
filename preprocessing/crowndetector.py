@@ -53,11 +53,8 @@ def erode(img):
 
 
 def recursive_mask_and_crop(img):
-    print('\nRecursive Call')
     for contour in find_contours(img, 55):
         if len(contour) > 900:
-            print(len(contour.astype(int)))
-
             cv2_contour = []
 
             for point in contour.astype(int):
