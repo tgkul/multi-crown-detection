@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from PIL import Image
 from os.path import join
 
 
@@ -30,3 +31,5 @@ def save_plots(filename, mse_list_dict):
     fig.savefig(join('saved_files', filename, 'mse_plots.png'), format='png', dpi=150)
     print('Plots saved: ' + join('saved_files', filename, 'mse_plots.png'))
 
+    img = Image.open(join('saved_files', filename, 'mse_plots.png'))
+    img.show()

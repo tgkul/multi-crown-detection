@@ -36,7 +36,8 @@ def save_collage(filename, crown_dict, mse_dict):
 
     collage.save(join('saved_files', filename, 'collage.jpg'))
     print('Collage saved: ' + join('saved_files', filename, 'collage.jpg'))
-    return collage
+    collage.show()
+    # return collage
 
 
 def get_collage(crown_dict, mse_dict):
