@@ -16,46 +16,63 @@ from errno import ENOENT
 filterwarnings("ignore")
 
 
-def file_remove(filename):
-    try:
-        remove(filename)
-    except OSError as e:
-        if e.errno != ENOENT:
-            raise
+class DatabaseCreator:
+    def __init__(self):
+        self.resnet = load_model(join('model', 'model-resnet50.h5'))
+        print('Model Loaded')
 
+    def file_remove(self, filename):
+        try:
+            remove(filename)
+        except OSError as e:
+            if e.errno != ENOENT:
+                raise
 
-def main(dir_path):
-    rename_files(dataset_dir=dir_path, id_length=0)
-    print('Rename Done')
+    def main(self, dir_path, id_length, database_name):
+        rename_files(dataset_dir=dir_path, id_length=id_length)
+        print('Rename Done')
 
-    correct_tree(dataset_path=dir_path)
-    print('Tree Corrected')
+        correct_tree(dataset_path=dir_path)
+        print('Tree Corrected')
 
-    crop_to_crown(root_file_path=dir_path)
-    print('cropped')
+        crop_to_crown(root_file_path=dir_path)
+        print('cropped')
 
-    augment(root_dir_path=dir_path)
-    print('augmented')
+        augment(root_dir_path=dir_path)
+        print('augmented')
 
-    correct_histogram(root_dir_path=dir_path)
-    print('Histogram Corrected')
+        correct_histogram(root_dir_path=dir_path)
+        print('Histogram Corrected')
 
-    resnet = load_model(join('model', 'model-resnet50.h5'))
-    database = 'database_new.h5'
+        self.file_remove(join('database', database_name))
 
-    # file_remove(join('database', database))
+        for subdir, dirs, files in walk(dir_path):
+            if subdir != dir_path:
+                for file in files:
+                    if 'jpg' in file:
+                        img_relative_path = join(subdir, file)
+                        image = open(img_relative_path).convert('RGB')
+                        features = get_features(image, self.resnet)
+                        add_image_features(file.split('.')[0], features, database_name)
 
-    for subdir, dirs, files in walk(dir_path):
-        if subdir != dir_path:
-            for file in files:
-                if 'jpg' in file:
-                    img_relative_path = join(subdir, file)
-                    image = open(img_relative_path).convert('RGB')
-                    features = get_features(image, resnet)
-                    add_image_features(file.split('.')[0], features, database)
-
-    print('Database Created')
+        print('Database Created')
 
 
 if __name__ == '__main__':
-    main('db_images')
+
+    creator = DatabaseCreator()
+
+    flag = True
+
+    while flag:
+
+        root_path = input("\n\nEnter the root path of images [db_images]: ") or "db_images"
+        database_name = input("Enter the database name [database]: ") or "database"
+        id_length = input("Enter the ID length [any]: ") or '0'
+
+        creator.main(root_path, int(id_length), database_name+'.h5')
+
+        not_stop = input("\nDo you want to continue? (Y/N): ")
+
+        if not_stop.lower() == 'n':
+            flag = False

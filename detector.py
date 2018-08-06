@@ -93,8 +93,8 @@ def main():
 
     while flag:
 
-        img_name = input("\n\nEnter the path of image [2.jpg]: ") or "2.jpg"
-        database_name = input("Enter the database name [database_new.h5]: ") or "database_new.h5"
+        img_name = input("\nEnter the path of image [2.jpg]: ") or "2.jpg"
+        database_name = input("Enter the database name [database.h5]: ") or "database.h5"
 
         image_path = join('test_images', img_name)
         database_path = join('database', database_name)
@@ -109,4 +109,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
