@@ -13,7 +13,7 @@ from metric.mse import get_mse
 from mlmodel.featureextractor import get_features
 from preprocessing.crowndetector import get_crowns
 from preprocessing.histogram_equilization import correct_histogram_of_single_image
-from save_results.savecollage import save_collage, get_collage
+from save_results.savecollage import save_collage, save_images
 from save_results.saveplot import save_plots
 from globals import global_variables
 
@@ -68,12 +68,16 @@ class Detector:
         crown_mse_list_dict = {}
 
         print('\nNumber of crowns: ', len(images))
+
+        i = 0
         for img in images:
             img = correct_histogram_of_single_image(img)
             file, mse, mse_dict = self.matcher(database_path, img, self.resnet)
             crown_dict[file] = img
             crown_error_dict[file] = mse
             crown_mse_list_dict[file] = mse_dict
+            img.save(join('saved_files', str(i)+'.jpg'))
+            i += 1
 
         return crown_dict, crown_error_dict, crown_mse_list_dict
 
@@ -82,6 +86,7 @@ class Detector:
 
         crown_images, crown_mse, crown_mse_list = self.super_matcher(database_path, image_path)
         save_collage(split(image_path)[-1].split('.')[0], crown_images, crown_mse)
+        save_images(split(image_path)[-1].split('.')[0], crown_images, crown_mse)
         save_plots(split(image_path)[-1].split('.')[0], crown_mse_list)
 
 
