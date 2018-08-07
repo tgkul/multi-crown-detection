@@ -8,6 +8,7 @@ from numpy import array as nparray
 from os.path import join, isdir, split
 from shutil import rmtree
 from os import mkdir
+from os import system, name
 
 from metric.mse import get_mse
 from mlmodel.featureextractor import get_features
@@ -20,6 +21,10 @@ from globals import global_variables
 filterwarnings("ignore")
 
 
+def cls():
+    system('cls' if name == 'nt' else 'clear')
+
+
 class Detector:
 
     def __init__(self):
@@ -28,6 +33,8 @@ class Detector:
         mkdir('saved_files')
 
         self.resnet = load_model(join('model', 'model-resnet50.h5'))
+
+        cls()
         print('Model loaded\n\n')
 
     def matcher(self, database_path, img, model):
@@ -97,7 +104,7 @@ def main():
     flag = True
 
     while flag:
-
+        cls()
         img_name = input("\nEnter the path of image [2.jpg]: ") or "2.jpg"
         database_name = input("Enter the database name [database.h5]: ") or "database.h5"
 
@@ -114,3 +121,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    cls()

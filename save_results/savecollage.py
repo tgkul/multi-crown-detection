@@ -6,7 +6,6 @@ from PIL.ImageDraw import Draw
 from PIL.Image import new as new_image
 from math import ceil
 from os.path import join, isdir
-from base64 import b64encode
 
 
 def save_collage(filename, crown_dict, mse_dict):
@@ -56,5 +55,5 @@ def save_images(filename, crown_dict, mse_dict):
         Draw(img).text((10, 5), crown + ' with error: ' + str(mse_dict[crown]), fill=(255, 255, 255), font=font)
         img.save(join('saved_files', filename, 'crown'+str(i)+'.jpg'))
         print('Saved ' + join('saved_files', filename, 'crown'+str(i)+'.jpg'))
-        img.show()
+        # img.show()
         i += 1
