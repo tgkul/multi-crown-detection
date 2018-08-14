@@ -1,17 +1,18 @@
-from warnings import filterwarnings
+from errno import ENOENT
 from os import walk, remove
-from os.path import join
+from os.path import join, isdir
+from warnings import filterwarnings
+
 from PIL.Image import open
 from keras.models import load_model
 
-from preprocessing.name_correction import rename_files
-from preprocessing.file_tree_correction import correct_tree
-from preprocessing.crowndetector import crop_to_crown
 from mlmodel.featureextractor import get_features
+from preprocessing.crowndetector import crop_to_crown
 from preprocessing.data_augmentation import augment
-from preprocessing.histogram_equilization import correct_histogram
 from preprocessing.database_creator import add_image_features
-from errno import ENOENT
+from preprocessing.file_tree_correction import correct_tree
+from preprocessing.histogram_equilization import correct_histogram
+from preprocessing.name_correction import rename_files
 
 filterwarnings("ignore")
 
@@ -29,20 +30,22 @@ class DatabaseCreator:
                 raise
 
     def main(self, dir_path, id_length, database_name):
-        rename_files(dataset_dir=dir_path, id_length=id_length)
-        print('Rename Done')
+        print(isdir(join(dir_path, 'in')))
+        if not isdir(join(dir_path, 'in')):
+            rename_files(dataset_dir=dir_path, id_length=id_length)
+            print('Rename Done')
 
-        correct_tree(dataset_path=dir_path)
-        print('Tree Corrected')
+            correct_tree(dataset_path=dir_path)
+            print('Tree Corrected')
 
-        crop_to_crown(root_file_path=dir_path)
-        print('cropped')
+            crop_to_crown(root_file_path=dir_path)
+            print('cropped')
 
-        augment(root_dir_path=dir_path)
-        print('augmented')
+            augment(root_dir_path=dir_path)
+            print('augmented')
 
-        correct_histogram(root_dir_path=dir_path)
-        print('Histogram Corrected')
+            correct_histogram(root_dir_path=dir_path)
+            print('Histogram Corrected')
 
         self.file_remove(join('database', database_name))
 

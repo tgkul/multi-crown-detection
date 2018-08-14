@@ -1,7 +1,8 @@
-from cv2 import imread, imwrite, IMREAD_GRAYSCALE, createCLAHE
-from PIL import Image
 from os import walk, remove
 from os.path import join
+
+from PIL import Image
+from cv2 import imread, imwrite, IMREAD_GRAYSCALE, createCLAHE
 from numpy import array
 
 
@@ -24,3 +25,7 @@ def correct_histogram_of_single_image(image):
     cv2_image = array(image.convert('L'))
     cv2_image = clahe.apply(cv2_image)
     return Image.fromarray(cv2_image).convert('RGB')
+
+
+if __name__ == '__main__':
+    correct_histogram('../data/')
